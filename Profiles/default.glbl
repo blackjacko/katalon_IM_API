@@ -6,28 +6,38 @@
    <defaultProfile>true</defaultProfile>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'imapp.lfbxci66o.com/member'</initValue>
-      <name>app</name>
+      <initValue>'falimapp.bahdie4ze.com/member'</initValue>
+      <name>QAT_APP_Member</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'5JXHu4dt'</initValue>
-      <name>identityCode</name>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description></description>
-      <initValue>''</initValue>
-      <name>username</name>
+      <initValue>'imadm.lfbxci66o.com/apis'</initValue>
+      <name>UD_Console_Admin</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'imweb.lfbxci66o.com/member'</initValue>
-      <name>web</name>
+      <name>UD_WEB_Member</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'imapp.lfbxci66o.com/member'</initValue>
+      <name>UD_APP_Member</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'9tgdheIe'</initValue>
+      <name>IdentityCode</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Jack'</initValue>
+      <name>UserName</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>''</initValue>
-      <name>encodedKey</name>
+      <name>EncodedKey</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
@@ -37,17 +47,12 @@
    <GlobalVariableEntity>
       <description></description>
       <initValue>''</initValue>
-      <name>roomId</name>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description></description>
-      <initValue>'imadm.lfbxci66o.com/apis'</initValue>
-      <name>console_admin</name>
+      <name>RoomId</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'aed24754-7a69-46bb-b0a2-41bbaedde602'</initValue>
-      <name>refresh_token</name>
+      <name>Refresh_Token</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>

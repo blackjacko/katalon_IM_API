@@ -12,27 +12,37 @@ public class GlobalVariable {
     /**
      * <p></p>
      */
-    public static Object app
+    public static Object QAT_APP_Member
      
     /**
      * <p></p>
      */
-    public static Object identityCode
+    public static Object UD_Console_Admin
      
     /**
      * <p></p>
      */
-    public static Object username
+    public static Object UD_WEB_Member
      
     /**
      * <p></p>
      */
-    public static Object web
+    public static Object UD_APP_Member
      
     /**
      * <p></p>
      */
-    public static Object encodedKey
+    public static Object IdentityCode
+     
+    /**
+     * <p></p>
+     */
+    public static Object UserName
+     
+    /**
+     * <p></p>
+     */
+    public static Object EncodedKey
      
     /**
      * <p></p>
@@ -42,17 +52,12 @@ public class GlobalVariable {
     /**
      * <p></p>
      */
-    public static Object roomId
+    public static Object RoomId
      
     /**
      * <p></p>
      */
-    public static Object console_admin
-     
-    /**
-     * <p></p>
-     */
-    public static Object refresh_token
+    public static Object Refresh_Token
      
     /**
      * <p></p>
@@ -71,15 +76,16 @@ public class GlobalVariable {
 			selectedVariables += TestCaseMain.getGlobalVariables(RunConfiguration.getExecutionProfile())
             selectedVariables += RunConfiguration.getOverridingParameters()
     
-            app = selectedVariables['app']
-            identityCode = selectedVariables['identityCode']
-            username = selectedVariables['username']
-            web = selectedVariables['web']
-            encodedKey = selectedVariables['encodedKey']
+            QAT_APP_Member = selectedVariables['QAT_APP_Member']
+            UD_Console_Admin = selectedVariables['UD_Console_Admin']
+            UD_WEB_Member = selectedVariables['UD_WEB_Member']
+            UD_APP_Member = selectedVariables['UD_APP_Member']
+            IdentityCode = selectedVariables['IdentityCode']
+            UserName = selectedVariables['UserName']
+            EncodedKey = selectedVariables['EncodedKey']
             UserId = selectedVariables['UserId']
-            roomId = selectedVariables['roomId']
-            console_admin = selectedVariables['console_admin']
-            refresh_token = selectedVariables['refresh_token']
+            RoomId = selectedVariables['RoomId']
+            Refresh_Token = selectedVariables['Refresh_Token']
             UID = selectedVariables['UID']
             OID = selectedVariables['OID']
             

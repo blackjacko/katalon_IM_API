@@ -51,7 +51,7 @@
    <soapRequestMethod></soapRequestMethod>
    <soapServiceFunction></soapServiceFunction>
    <variables>
-      <defaultValue>GlobalVariable.console_admin</defaultValue>
+      <defaultValue>GlobalVariable.UD_Console_Admin</defaultValue>
       <description></description>
       <id>bb7db7f0-2055-4158-815b-da0455490d40</id>
       <masked>false</masked>

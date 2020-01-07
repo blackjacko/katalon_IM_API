@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>1_Login ByIdentityCode</name>
+   <name>2_Login byName</name>
    <tag></tag>
-   <elementGuidId>da786ca3-cd7b-42d2-9783-ad852240c48d</elementGuidId>
+   <elementGuidId>19ead0e1-5e38-4f58-a302-89ff524d31ad</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <followRedirects>false</followRedirects>
@@ -19,25 +19,39 @@
    </httpHeaderProperties>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>GET</restRequestMethod>
-   <restUrl>http://${app}/im/user/getByIdentityCode/${identityCode}</restUrl>
+   <restUrl>http://${env}/im/user/byName/${username}</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
    <soapRequestMethod></soapRequestMethod>
    <soapServiceFunction></soapServiceFunction>
    <variables>
-      <defaultValue>GlobalVariable.app</defaultValue>
+      <defaultValue>GlobalVariable.QAT_APP_Member</defaultValue>
       <description></description>
-      <id>aa4c50b8-3dbf-4520-9af4-5d53cbfd33fb</id>
+      <id>819913dc-2aac-4177-a840-769e9563962f</id>
       <masked>false</masked>
-      <name>app</name>
+      <name>env</name>
    </variables>
    <variables>
-      <defaultValue>GlobalVariable.identityCode</defaultValue>
+      <defaultValue>GlobalVariable.UserName</defaultValue>
       <description></description>
-      <id>1ffe4b2e-f6ab-4dc7-97af-605902bfee91</id>
+      <id>08438117-4f06-4dfd-a7f8-9bbe77bb453c</id>
       <masked>false</masked>
-      <name>identityCode</name>
+      <name>username</name>
    </variables>
+   <verificationScript>import static org.assertj.core.api.Assertions.*
+
+import com.kms.katalon.core.testobject.RequestObject
+import com.kms.katalon.core.testobject.ResponseObject
+import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
+import com.kms.katalon.core.webservice.verification.WSResponseManager
+
+import groovy.json.JsonSlurper
+import internal.GlobalVariable as GlobalVariable
+
+RequestObject request = WSResponseManager.getInstance().getCurrentRequest()
+
+ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
+</verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>
