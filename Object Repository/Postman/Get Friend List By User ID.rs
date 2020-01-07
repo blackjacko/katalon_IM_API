@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebServiceRequestEntity>
+   <description></description>
+   <name>Get Friend List By User ID</name>
+   <tag></tag>
+   <elementGuidId>47f230d8-376c-45a5-8f5c-a8f7d0de7c34</elementGuidId>
+   <selectorMethod>BASIC</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <followRedirects>false</followRedirects>
+   <httpBody></httpBody>
+   <httpBodyContent></httpBodyContent>
+   <httpBodyType></httpBodyType>
+   <migratedVersion>5.4.1</migratedVersion>
+   <restRequestMethod>GET</restRequestMethod>
+   <restUrl>http://${app}/im/friend/list/${UserId}</restUrl>
+   <serviceType>RESTful</serviceType>
+   <soapBody></soapBody>
+   <soapHeader></soapHeader>
+   <soapRequestMethod></soapRequestMethod>
+   <soapServiceFunction></soapServiceFunction>
+   <variables>
+      <defaultValue>GlobalVariable.app</defaultValue>
+      <description></description>
+      <id>047e47e4-a197-4956-aded-9f193425986a</id>
+      <masked>false</masked>
+      <name>app</name>
+   </variables>
+   <variables>
+      <defaultValue>GlobalVariable.UserId</defaultValue>
+      <description></description>
+      <id>6c7bd392-3522-4ca0-b2c3-d1999a7e8f2e</id>
+      <masked>false</masked>
+      <name>UserId</name>
+   </variables>
+   <wsdlAddress></wsdlAddress>
+</WebServiceRequestEntity>

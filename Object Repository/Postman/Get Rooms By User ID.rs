@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebServiceRequestEntity>
+   <description></description>
+   <name>Get Rooms By User ID</name>
+   <tag></tag>
+   <elementGuidId>47fb6996-f842-494f-b561-93b8acfb60c4</elementGuidId>
+   <selectorMethod>BASIC</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <followRedirects>false</followRedirects>
+   <httpBody></httpBody>
+   <httpBodyContent></httpBodyContent>
+   <httpBodyType></httpBodyType>
+   <migratedVersion>5.4.1</migratedVersion>
+   <restRequestMethod>GET</restRequestMethod>
+   <restUrl>http://${app}/im/room/getRooms/${UserId}?pages=1&amp;size=10</restUrl>
+   <serviceType>RESTful</serviceType>
+   <soapBody></soapBody>
+   <soapHeader></soapHeader>
+   <soapRequestMethod></soapRequestMethod>
+   <soapServiceFunction></soapServiceFunction>
+   <variables>
+      <defaultValue>GlobalVariable.app</defaultValue>
+      <description></description>
+      <id>f90a9798-af80-4f15-8c74-db666824b4d1</id>
+      <masked>false</masked>
+      <name>app</name>
+   </variables>
+   <variables>
+      <defaultValue>GlobalVariable.UserId</defaultValue>
+      <description></description>
+      <id>4a7ea1a8-4f2a-44c1-8051-0302b6ec81f7</id>
+      <masked>false</masked>
+      <name>UserId</name>
+   </variables>
+   <wsdlAddress></wsdlAddress>
+</WebServiceRequestEntity>

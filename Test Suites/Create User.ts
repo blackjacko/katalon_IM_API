@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestSuiteEntity>
+   <description></description>
+   <name>Create User</name>
+   <tag></tag>
+   <isRerun>false</isRerun>
+   <mailRecipient></mailRecipient>
+   <numberOfRerun>0</numberOfRerun>
+   <pageLoadTimeout>30</pageLoadTimeout>
+   <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
+   <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
+   <testSuiteGuid>44be631c-58f9-4ad4-9084-0667f21035c3</testSuiteGuid>
+   <testCaseLink>
+      <guid>814e33af-f97e-4a48-ab5a-745c69e2daf0</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Console/Create User</testCaseId>
+      <testDataLink>
+         <combinationType>ONE</combinationType>
+         <id>81baa659-8bdd-4e69-9b2c-e9dab6934a0b</id>
+         <iterationEntity>
+            <iterationType>ALL</iterationType>
+            <value></value>
+         </iterationEntity>
+         <testDataId>Data Files/Create User</testDataId>
+      </testDataLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>0f3fb7b3-0eeb-4eb0-9c99-307bfdb3599b</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>81baa659-8bdd-4e69-9b2c-e9dab6934a0b</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>oid</value>
+         <variableId>aa9a0a4b-f4f1-4ddf-857a-08035397d39f</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>81baa659-8bdd-4e69-9b2c-e9dab6934a0b</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>uid</value>
+         <variableId>43606d58-49cd-4ad0-bda2-086ca0128ec4</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>603c0aa7-2a4f-4d79-95a7-026865b2dd00</variableId>
+      </variableLink>
+   </testCaseLink>
+</TestSuiteEntity>

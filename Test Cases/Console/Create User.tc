@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Create User</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>5cb3e66d-c83b-4802-8758-30d843aa4750</testCaseGuid>
+   <variable>
+      <defaultValue>GlobalVariable.console_admin</defaultValue>
+      <description></description>
+      <id>0f3fb7b3-0eeb-4eb0-9c99-307bfdb3599b</id>
+      <masked>false</masked>
+      <name>env</name>
+   </variable>
+   <variable>
+      <defaultValue>'699'</defaultValue>
+      <description></description>
+      <id>aa9a0a4b-f4f1-4ddf-857a-08035397d39f</id>
+      <masked>false</masked>
+      <name>oid</name>
+   </variable>
+   <variable>
+      <defaultValue>'403022663557123'</defaultValue>
+      <description></description>
+      <id>43606d58-49cd-4ad0-bda2-086ca0128ec4</id>
+      <masked>false</masked>
+      <name>uid</name>
+   </variable>
+   <variable>
+      <defaultValue>GlobalVariable.refresh_token</defaultValue>
+      <description></description>
+      <id>603c0aa7-2a4f-4d79-95a7-026865b2dd00</id>
+      <masked>false</masked>
+      <name>oatuh</name>
+   </variable>
+</TestCaseEntity>

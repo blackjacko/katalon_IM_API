@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebServiceRequestEntity>
+   <description></description>
+   <name>Get NeedViewedRooms By User ID</name>
+   <tag></tag>
+   <elementGuidId>80af25ba-8fb1-4351-af20-cbfeb51eddc0</elementGuidId>
+   <selectorMethod>BASIC</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <followRedirects>false</followRedirects>
+   <httpBody></httpBody>
+   <httpBodyContent></httpBodyContent>
+   <httpBodyType></httpBodyType>
+   <migratedVersion>5.4.1</migratedVersion>
+   <restRequestMethod>GET</restRequestMethod>
+   <restUrl>http://${app}/im/room/getNeedViewedRooms/${UserId}</restUrl>
+   <serviceType>RESTful</serviceType>
+   <soapBody></soapBody>
+   <soapHeader></soapHeader>
+   <soapRequestMethod></soapRequestMethod>
+   <soapServiceFunction></soapServiceFunction>
+   <variables>
+      <defaultValue>GlobalVariable.app</defaultValue>
+      <description></description>
+      <id>8c4f4b3d-e031-46dd-9907-0898d071aab7</id>
+      <masked>false</masked>
+      <name>app</name>
+   </variables>
+   <variables>
+      <defaultValue>GlobalVariable.UserId</defaultValue>
+      <description></description>
+      <id>dc93b130-0702-40bf-af34-cfe1316014de</id>
+      <masked>false</masked>
+      <name>UserId</name>
+   </variables>
+   <wsdlAddress></wsdlAddress>
+</WebServiceRequestEntity>
