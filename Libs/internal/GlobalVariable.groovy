@@ -62,6 +62,16 @@ public class GlobalVariable {
     /**
      * <p></p>
      */
+    public static Object Access_Token
+     
+    /**
+     * <p></p>
+     */
+    public static Object WS_Token
+     
+    /**
+     * <p></p>
+     */
     public static Object UID
      
     /**
@@ -86,6 +96,8 @@ public class GlobalVariable {
             UserId = selectedVariables['UserId']
             RoomId = selectedVariables['RoomId']
             Refresh_Token = selectedVariables['Refresh_Token']
+            Access_Token = selectedVariables['Access_Token']
+            WS_Token = selectedVariables['WS_Token']
             UID = selectedVariables['UID']
             OID = selectedVariables['OID']
             

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>3_Get oauth token with params</name>
+   <name>Get oauth token with params</name>
    <tag></tag>
    <elementGuidId>b9d3fc9a-26ce-4c4c-8671-163b9eebfe7f</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>

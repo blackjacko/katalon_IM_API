@@ -1,15 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>2_Login byName</name>
+   <name>Get oauth token (for others RESTFUL API)</name>
    <tag></tag>
-   <elementGuidId>19ead0e1-5e38-4f58-a302-89ff524d31ad</elementGuidId>
+   <elementGuidId>d7cc649d-cfea-4cbc-be11-43d22b0ba05b</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
-   <httpBodyContent></httpBodyContent>
-   <httpBodyType></httpBodyType>
+   <httpBodyContent>{
+  &quot;parameters&quot;: [
+    {
+      &quot;name&quot;: &quot;grant_type&quot;,
+      &quot;value&quot;: &quot;password&quot;,
+      &quot;type&quot;: &quot;text&quot;
+    },
+    {
+      &quot;name&quot;: &quot;username&quot;,
+      &quot;value&quot;: &quot;${encodedkey}&quot;,
+      &quot;type&quot;: &quot;text&quot;
+    },
+    {
+      &quot;name&quot;: &quot;password&quot;,
+      &quot;value&quot;: &quot;123456&quot;,
+      &quot;type&quot;: &quot;text&quot;
+    }
+  ]
+}</httpBodyContent>
+   <httpBodyType>form-data</httpBodyType>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
@@ -17,9 +35,15 @@
       <type>Main</type>
       <value>Basic aW1fbWVtYmVyX2NsaWVudGFwcDoxMjM0NTY=</value>
    </httpHeaderProperties>
+   <httpHeaderProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>Content-Type</name>
+      <type>Main</type>
+   </httpHeaderProperties>
    <migratedVersion>5.4.1</migratedVersion>
-   <restRequestMethod>GET</restRequestMethod>
-   <restUrl>http://${env}/im/user/byName/${username}</restUrl>
+   <restRequestMethod>POST</restRequestMethod>
+   <restUrl>http://${env}/oauth/token</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -28,16 +52,16 @@
    <variables>
       <defaultValue>GlobalVariable.QAT_APP_Member</defaultValue>
       <description></description>
-      <id>819913dc-2aac-4177-a840-769e9563962f</id>
+      <id>7b1c8db4-bf51-4cb8-969b-d07e85c7e22e</id>
       <masked>false</masked>
       <name>env</name>
    </variables>
    <variables>
-      <defaultValue>GlobalVariable.UserName</defaultValue>
+      <defaultValue>GlobalVariable.EncodedKey</defaultValue>
       <description></description>
-      <id>08438117-4f06-4dfd-a7f8-9bbe77bb453c</id>
+      <id>e779599d-80a2-4c34-bcb8-6056ded514bc</id>
       <masked>false</masked>
-      <name>username</name>
+      <name>encodedkey</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
@@ -52,6 +76,10 @@ import internal.GlobalVariable as GlobalVariable
 RequestObject request = WSResponseManager.getInstance().getCurrentRequest()
 
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
-</verificationScript>
+
+def result = new groovy.json.JsonSlurper()
+def response_body = result.parseText(response.getResponseBodyContent())
+def access_token = response_body.access_token
+GlobalVariable.Access_Token = access_token</verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>

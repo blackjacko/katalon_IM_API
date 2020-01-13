@@ -36,7 +36,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>''</initValue>
+      <initValue>'SmFjazo5dGdkaGVJZQ=='</initValue>
       <name>EncodedKey</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -53,6 +53,16 @@
       <description></description>
       <initValue>'aed24754-7a69-46bb-b0a2-41bbaedde602'</initValue>
       <name>Refresh_Token</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'76353ff6-7bae-4074-9152-07ae033261a0'</initValue>
+      <name>Access_Token</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>WS_Token</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
