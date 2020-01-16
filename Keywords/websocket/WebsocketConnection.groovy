@@ -1,5 +1,6 @@
 package websocket
 
+import internal.GlobalVariable as GlobalVariable
 import com.kms.katalon.core.annotation.Keyword
 import groovy.transform.CompileStatic
 import java.net.URI
@@ -9,12 +10,12 @@ import org.eclipse.jetty.websocket.client.WebSocketClient
 import com.velocitylight.jetty.client.ToUpperClientSocket
 
 @CompileStatic
-class WS {
+class WSConnect {
 	@CompileStatic
 	@Keyword
-	static void main(String uri, String msg) {
+	static void sendMessage(String uri, String msg) {
 		String dest = uri;
-		String message =msg;
+		String message = msg;
 		WebSocketClient client = new WebSocketClient();
 		try {
 
@@ -24,8 +25,9 @@ class WS {
 			ClientUpgradeRequest request = new ClientUpgradeRequest();
 			client.connect(socket, echoUri, request);
 			socket.getLatch().await();
-			socket.sendMessage(msg);
+			socket.sendMessage(message);
 			Thread.sleep(10000l);
+			GlobalVariable.WS_Reply = socket.getReply()
 		} catch (Throwable t) {
 			t.printStackTrace();
 		} finally {

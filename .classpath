@@ -131,7 +131,6 @@
 			<attribute name="javadoc_location" value="file:/C:/Users/Jack_/Downloads/Katalon_Studio_Windows_64-7.2.1/configuration/resources/apidocs/com.kms.katalon.core.windows/"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Jack_/Documents/katalon_im_api/Drivers/SimpleEchoSocket.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Jack_/Documents/katalon_im_api/Drivers/websocket.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Jack_/Downloads/Katalon_Studio_Windows_64-7.2.1/configuration/plugin/install/13074/1.0.2/ExcelKeywords.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Jack_/Downloads/Katalon_Studio_Windows_64-7.2.1/configuration/plugin/install/20179/1.0.7/katalon-studio-report-plugin.jar"/>

@@ -11,6 +11,11 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
+      <initValue>'ws://falimsocket.bahdie4ze.com/?auth='</initValue>
+      <name>QAT_WS</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
       <initValue>'imadm.lfbxci66o.com/apis'</initValue>
       <name>UD_Console_Admin</name>
    </GlobalVariableEntity>
@@ -38,6 +43,11 @@
       <description></description>
       <initValue>'SmFjazo5dGdkaGVJZQ=='</initValue>
       <name>EncodedKey</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>EncodedAuth</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
@@ -73,5 +83,10 @@
       <description></description>
       <initValue>''</initValue>
       <name>OID</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>WS_Reply</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

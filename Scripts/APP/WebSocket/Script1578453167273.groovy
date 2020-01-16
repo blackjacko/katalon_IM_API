@@ -14,11 +14,24 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
-import com.velocitylight.jetty.client.WebSocketClientMain
+import websocket.WSConnect as WSC
 import com.velocitylight.jetty.client.ToUpperClientSocket
-import websocket.WS
+
+WS.sendRequestAndVerify(findTestObject('Member/Login ByIdentityCode', [('env') : env_app, ('identityCode') : identity_code]))
+
+WS.sendRequestAndVerify(findTestObject('Member/Get oauth token (for others RESTFUL API)', [('env') : env_app
+            , ('encodedkey') : GlobalVariable.EncodedKey]))
+
+WS.sendRequestAndVerify(findTestObject('Member/Get WS Token', [('env') : env_app, ('access_token') : GlobalVariable.Access_Token]))
 
 
-def desturi = 'ws://falimsocket.bahdie4ze.com/?auth=ew0KInRva2VuIjogImV5SmhiR2NpT2lKSVV6VXhNaUo5LmV5SnpkV0lpT2lKVWFIVWdTbUZ1SURBNUlERTNPak16T2pRd0lFTlRWQ0F5TURJd0luMC4wYVJhU19abThNd3VhekEwQkh2TW13XzFJcEV3bnlVamJsUTRmaGlLbHJsMy1Dd1pRd2tpSEdGN0ROZUwwOTQ3RXlISTdoUHpOVk1KM0l6SURsMGVDdyI6IDE1MywNCiJpZCI6IDcxNQ0KfQ=='
-def text = '{"cmd":11,"from":39,"to":20,"msgType":0,"createTime":1576562393,"type":3,"roomId":20,"avatarText":"Jack","parentRoomId":19,"content":"send message from Jack by Katalon"}'
-websocket.WS.main(desturi, text)
+def desturi = env_ws + GlobalVariable.EncodedAuth
+def msg = '{"cmd": 11,"from": 39,"to": 36,"createTime": 1576562393,"type": 1,"roomId": 27,"content": "send message from Jack by Katalon"}'
+def jsonSlurper = new groovy.json.JsonSlurper()
+def request = jsonSlurper.parseText(msg)
+
+websocket.WSConnect.sendMessage(desturi, msg)
+
+def response = jsonSlurper.parseText(GlobalVariable.WS_Reply)
+
+assert request.content == response.content

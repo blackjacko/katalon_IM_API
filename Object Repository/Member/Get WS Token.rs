@@ -57,7 +57,17 @@ ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 
 def result = new groovy.json.JsonSlurper()
 def response_body = result.parseText(response.getResponseBodyContent())
-def ws_token = response_body.token
-GlobalVariable.WS_Token = ws_token</verificationScript>
+def ws_token = response_body.data.token
+GlobalVariable.WS_Token = ws_token
+//println ws_token
+
+def decoder = Base64.getDecoder()
+def encoder = Base64.getEncoder()
+
+def texts = '{&quot;token&quot;: ' + ws_token + ',' + '&quot;roomId&quot;: 27,&quot;id&quot;: 39}'
+byte [] key = texts.getBytes(&quot;UTF-8&quot;)
+String encodedauth = encoder.encodeToString(key);
+GlobalVariable.EncodedAuth = encodedauth
+//println encodedauth</verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>
