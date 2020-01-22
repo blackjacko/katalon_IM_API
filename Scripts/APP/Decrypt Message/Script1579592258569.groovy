@@ -14,25 +14,14 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
-import websocket.WSConnect as WSC
-import com.velocitylight.jetty.client.ToUpperClientSocket
+import websocket.DESUtil as DES
 
-WS.sendRequestAndVerify(findTestObject('Member/Login ByIdentityCode', [('env') : env_app, ('identityCode') : identity_code]))
+def key = "123456789012345678901234"
+def iv = "45841036"
+def text = "pbcF8dX4vwbQk79TwnUt5jDBt54NBH/TvlGQ8g4InvPB1+tgWZdxy4KvsQlZR3Vj55rPdIbvqJSUuhr8h6LAhrd+hDDHWZB6eWf6IrRDcdqHsqGMWhAXZgFro4p4LrmndgPX9hhL4C4wbAisCX/VcXMcgeNhEv32VWvuwuAR4myhKzy01Ii7sRdFfpkDgM7azBpD7B6Cqxk="
+def bytekey = key.getBytes()
+def byteiv = iv.getBytes()
+def bytetext = text.getBytes()
 
-WS.sendRequestAndVerify(findTestObject('Member/Get oauth token (for others RESTFUL API)', [('env') : env_app
-            , ('encodedkey') : GlobalVariable.EncodedKey]))
-
-WS.sendRequestAndVerify(findTestObject('Member/Get WS Token', [('env') : env_app, ('access_token') : GlobalVariable.Access_Token]))
-
-
-def desturi = env_ws + GlobalVariable.EncodedAuth
-def msg = '{"cmd": 11,"from": 39,"to": 36,"createTime": 1576562393,"type": 1,"roomId": 27,"content": "send message from Jack by Katalon"}'
-def jsonSlurper = new groovy.json.JsonSlurper()
-def request = jsonSlurper.parseText(msg)
-
-websocket.WSConnect.sendMessage(desturi, msg)
-
-def response = jsonSlurper.parseText(GlobalVariable.WS_Reply)
-
-assert request.content == response.content
-assert response.cmd == 12
+DES.des3DecodeCBC(bytekey, byteiv, bytetext)
+println(GlobalVariable.DecMsg)

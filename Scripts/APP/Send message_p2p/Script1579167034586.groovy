@@ -14,25 +14,4 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
-import websocket.WSConnect as WSC
-import com.velocitylight.jetty.client.ToUpperClientSocket
 
-WS.sendRequestAndVerify(findTestObject('Member/Login ByIdentityCode', [('env') : env_app, ('identityCode') : identity_code]))
-
-WS.sendRequestAndVerify(findTestObject('Member/Get oauth token (for others RESTFUL API)', [('env') : env_app
-            , ('encodedkey') : GlobalVariable.EncodedKey]))
-
-WS.sendRequestAndVerify(findTestObject('Member/Get WS Token', [('env') : env_app, ('access_token') : GlobalVariable.Access_Token]))
-
-
-def desturi = env_ws + GlobalVariable.EncodedAuth
-def msg = '{"cmd": 11,"from": 39,"to": 36,"createTime": 1576562393,"type": 1,"roomId": 27,"content": "send message from Jack by Katalon"}'
-def jsonSlurper = new groovy.json.JsonSlurper()
-def request = jsonSlurper.parseText(msg)
-
-websocket.WSConnect.sendMessage(desturi, msg)
-
-def response = jsonSlurper.parseText(GlobalVariable.WS_Reply)
-
-assert request.content == response.content
-assert response.cmd == 12

@@ -89,4 +89,9 @@
       <initValue>''</initValue>
       <name>WS_Reply</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>DecMsg</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

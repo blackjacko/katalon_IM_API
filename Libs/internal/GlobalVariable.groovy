@@ -94,6 +94,11 @@ public class GlobalVariable {
      */
     public static Object WS_Reply
      
+    /**
+     * <p></p>
+     */
+    public static Object DecMsg
+     
 
     static {
         try {
@@ -118,6 +123,7 @@ public class GlobalVariable {
             UID = selectedVariables['UID']
             OID = selectedVariables['OID']
             WS_Reply = selectedVariables['WS_Reply']
+            DecMsg = selectedVariables['DecMsg']
             
         } catch (Exception e) {
             TestCaseMain.logGlobalVariableError(e)

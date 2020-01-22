@@ -10,7 +10,7 @@ import org.eclipse.jetty.websocket.client.WebSocketClient
 import com.velocitylight.jetty.client.ToUpperClientSocket
 
 @CompileStatic
-class WSConnect {
+public class WSConnect {
 	@CompileStatic
 	@Keyword
 	static void sendMessage(String uri, String msg) {
