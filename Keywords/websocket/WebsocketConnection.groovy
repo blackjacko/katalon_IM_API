@@ -27,7 +27,8 @@ public class WSConnect {
 			socket.getLatch().await();
 			socket.sendMessage(message);
 			Thread.sleep(10000l);
-			GlobalVariable.WS_Reply = socket.getReply()
+			final String reply = String.valueOf(socket.getReply())
+			GlobalVariable.WS_Reply = reply
 		} catch (Throwable t) {
 			t.printStackTrace();
 		} finally {

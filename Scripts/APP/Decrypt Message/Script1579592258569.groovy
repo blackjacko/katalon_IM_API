@@ -18,7 +18,7 @@ import websocket.DESUtil as DES
 
 def key = "123456789012345678901234"
 def iv = "45841036"
-def text = "pbcF8dX4vwbQk79TwnUt5jDBt54NBH/TvlGQ8g4InvPB1+tgWZdxy4KvsQlZR3Vj55rPdIbvqJSUuhr8h6LAhrd+hDDHWZB6eWf6IrRDcdqHsqGMWhAXZgFro4p4LrmndgPX9hhL4C4wbAisCX/VcXMcgeNhEv32VWvuwuAR4myhKzy01Ii7sRdFfpkDgM7azBpD7B6Cqxk="
+def text = "tQWzjzGAUoOjenW99rDstkKd8FSFf5CZYHQZXiseKepZoadlqOXgLi2ShDP64NdJGUUi6rSCiJkjgN7n0v560ouD6ADJa9hfzGj04cZdREr2K19ie7pfqmUgqxiES/Ii0HlwD3J6Co525ouCV4jK7NLjS1R0RFYMJBNZR6EkFmq1HKT7Hi9RagQrfAYPgwXM6liudU9Y0nEVRiwxANkZfQ=="
 def bytekey = key.getBytes()
 def byteiv = iv.getBytes()
 def bytetext = text.getBytes()

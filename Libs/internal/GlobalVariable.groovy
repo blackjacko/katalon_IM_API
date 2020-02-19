@@ -99,6 +99,16 @@ public class GlobalVariable {
      */
     public static Object DecMsg
      
+    /**
+     * <p></p>
+     */
+    public static Object Account
+     
+    /**
+     * <p></p>
+     */
+    public static Object Password
+     
 
     static {
         try {
@@ -124,6 +134,8 @@ public class GlobalVariable {
             OID = selectedVariables['OID']
             WS_Reply = selectedVariables['WS_Reply']
             DecMsg = selectedVariables['DecMsg']
+            Account = selectedVariables['Account']
+            Password = selectedVariables['Password']
             
         } catch (Exception e) {
             TestCaseMain.logGlobalVariableError(e)

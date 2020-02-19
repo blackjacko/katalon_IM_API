@@ -5,4 +5,18 @@
    <tag></tag>
    <comment></comment>
    <testCaseGuid>0d33aed1-c3ce-4511-b680-19ea642592bb</testCaseGuid>
+   <variable>
+      <defaultValue>GlobalVariable.QAT_WS</defaultValue>
+      <description></description>
+      <id>185bec84-f4eb-4d43-9788-17e45927850a</id>
+      <masked>false</masked>
+      <name>env_ws</name>
+   </variable>
+   <variable>
+      <defaultValue>GlobalVariable.QAT_APP_Member</defaultValue>
+      <description></description>
+      <id>e37fca4e-2603-4c04-b089-8ae84e5522f1</id>
+      <masked>false</masked>
+      <name>env_app</name>
+   </variable>
 </TestCaseEntity>

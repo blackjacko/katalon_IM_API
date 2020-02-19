@@ -17,12 +17,12 @@
     },
     {
       &quot;name&quot;: &quot;username&quot;,
-      &quot;value&quot;: &quot;${encodedkey}&quot;,
+      &quot;value&quot;: &quot;${account}&quot;,
       &quot;type&quot;: &quot;text&quot;
     },
     {
       &quot;name&quot;: &quot;password&quot;,
-      &quot;value&quot;: &quot;123456&quot;,
+      &quot;value&quot;: &quot;${password}&quot;,
       &quot;type&quot;: &quot;text&quot;
     }
   ]
@@ -62,6 +62,20 @@
       <id>e779599d-80a2-4c34-bcb8-6056ded514bc</id>
       <masked>false</masked>
       <name>encodedkey</name>
+   </variables>
+   <variables>
+      <defaultValue>'jack6666'</defaultValue>
+      <description></description>
+      <id>47563356-bd79-497d-a618-577be458216d</id>
+      <masked>false</masked>
+      <name>account</name>
+   </variables>
+   <variables>
+      <defaultValue>'12345678'</defaultValue>
+      <description></description>
+      <id>8628d5dd-05a2-4bf0-9a58-762e3e29108a</id>
+      <masked>false</masked>
+      <name>password</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 

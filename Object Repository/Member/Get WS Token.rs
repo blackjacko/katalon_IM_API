@@ -64,7 +64,7 @@ GlobalVariable.WS_Token = ws_token
 def decoder = Base64.getDecoder()
 def encoder = Base64.getEncoder()
 
-def texts = '{&quot;token&quot;: ' + ws_token + ',' + '&quot;roomId&quot;: 27,&quot;id&quot;: 39}'
+def texts = '{&quot;token&quot;: ' + ws_token + ',' + '&quot;roomId&quot;: 83,&quot;id&quot;: 39}'
 byte [] key = texts.getBytes(&quot;UTF-8&quot;)
 String encodedauth = encoder.encodeToString(key);
 GlobalVariable.EncodedAuth = encodedauth
