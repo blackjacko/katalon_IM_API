@@ -97,6 +97,11 @@ public class GlobalVariable {
     /**
      * <p></p>
      */
+    public static Object EncMsg
+     
+    /**
+     * <p></p>
+     */
     public static Object DecMsg
      
     /**
@@ -133,6 +138,7 @@ public class GlobalVariable {
             UID = selectedVariables['UID']
             OID = selectedVariables['OID']
             WS_Reply = selectedVariables['WS_Reply']
+            EncMsg = selectedVariables['EncMsg']
             DecMsg = selectedVariables['DecMsg']
             Account = selectedVariables['Account']
             Password = selectedVariables['Password']

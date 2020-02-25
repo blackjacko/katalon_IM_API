@@ -19,4 +19,39 @@
       <masked>false</masked>
       <name>env_app</name>
    </variable>
+   <variable>
+      <defaultValue>'jack14'</defaultValue>
+      <description></description>
+      <id>7fb792aa-6ed0-44b8-99db-eaf0e83ae21b</id>
+      <masked>false</masked>
+      <name>account</name>
+   </variable>
+   <variable>
+      <defaultValue>'12345678'</defaultValue>
+      <description></description>
+      <id>bbee326c-3786-48e2-8c10-414bfe4cb250</id>
+      <masked>false</masked>
+      <name>password</name>
+   </variable>
+   <variable>
+      <defaultValue>'tV+GCxMKm3UI6eAOxEJX/Wqp5eoWisBtTsv5oWl2zWRuvjzIBq8tQ0hnwjgQyyqWWOaoYXPbjTpoAZ+45CjafDgRA7fKkb4buXLciVUO0kIHykYEu7qhqWb/kcj+KyLLflIDXuyC0kS3nqp0gPPl0EjmLY2p8qeigrqiqYyDfkOpoT/ZY04MR+p/lmTgNPmXRu4Oj0RnXKwMLom/jHreA+F65hH8r8Fvl6AFjZzhjFCtqaMTKovfyTh3iB1HL/9h+dF/ekJPtgWnXsF9S1XZ7hfoUYTd7xeD1cx7lOVlUv2egptOwnCUbg=='</defaultValue>
+      <description></description>
+      <id>59729ea6-4dc1-4183-9300-03175e0c4b7b</id>
+      <masked>false</masked>
+      <name>message</name>
+   </variable>
+   <variable>
+      <defaultValue>GlobalVariable.RoomId</defaultValue>
+      <description></description>
+      <id>4e5d198f-df0f-415c-a122-a11c5f3e40ff</id>
+      <masked>false</masked>
+      <name>roomid</name>
+   </variable>
+   <variable>
+      <defaultValue>GlobalVariable.UID</defaultValue>
+      <description></description>
+      <id>a4a9dd4d-e21e-4865-9b24-a8f0f33442be</id>
+      <masked>false</masked>
+      <name>user_uid</name>
+   </variable>
 </TestCaseEntity>

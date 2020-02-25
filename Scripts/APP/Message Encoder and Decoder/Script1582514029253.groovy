@@ -18,10 +18,14 @@ import websocket.DESUtil as DES
 
 def key = "123456789012345678901234"
 def iv = "45841036"
-def text = "tQWzjzGAUoOjenW99rDstkKd8FSFf5CZYHQZXiseKepZoadlqOXgLi2ShDP64NdJGUUi6rSCiJkjgN7n0v560ouD6ADJa9hfzGj04cZdREr2K19ie7pfqmUgqxiES/Ii0HlwD3J6Co525ouCV4jK7NLjS1R0RFYMJBNZR6EkFmq1HKT7Hi9RagQrfAYPgwXM6liudU9Y0nEVRiwxANkZfQ=="
+def enctext = '{"type":1,"roomId":110,"parentRoomId":null,"cmd":11,"from":740,"to":110,"msgType":0,"createTime":1582275309000,"avatarText":"Jack15","content":"Send message by Jackkkkkkkk"}'
+def dectext = "pbcF8dX4vwbQk79TwnUt5jDBt54NBH/T7GVuQT860a0keViUm6ABT4Ui2cFpHfburSLvVvalGj5dZd4HhdKMAsYOUdLJWRV3SpZYX38mdb+jdt/CqKzPD6wVPSjV4PHYrb+L0SUyetpcP9Sj+Wjd2ckH3yH6oll3wjIwHuMZsWDIIsPtra/dv2LNA4SYNUhp6VOqs4P+ILs="
 def bytekey = key.getBytes()
 def byteiv = iv.getBytes()
-def bytetext = text.getBytes()
+def byteenctext = enctext.getBytes()
+def bytedectext = dectext.getBytes()
 
-DES.des3DecodeCBC(bytekey, byteiv, bytetext)
+DES.des3EncodeCBC(bytekey, byteiv, byteenctext)
+DES.des3DecodeCBC(bytekey, byteiv, bytedectext)
+println(GlobalVariable.EncMsg)
 println(GlobalVariable.DecMsg)

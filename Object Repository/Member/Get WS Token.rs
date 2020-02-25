@@ -35,7 +35,7 @@
       <name>env</name>
    </variables>
    <variables>
-      <defaultValue>GlobalVariable.Access_Token</defaultValue>
+      <defaultValue>'43d275c3-2e5b-40f5-bc49-34f2ad383470'</defaultValue>
       <description></description>
       <id>4b874cf3-4bdd-4737-93eb-a853d0ac7db3</id>
       <masked>false</masked>
@@ -59,15 +59,16 @@ def result = new groovy.json.JsonSlurper()
 def response_body = result.parseText(response.getResponseBodyContent())
 def ws_token = response_body.data.token
 GlobalVariable.WS_Token = ws_token
-//println ws_token
 
-def decoder = Base64.getDecoder()
-def encoder = Base64.getEncoder()
-
-def texts = '{&quot;token&quot;: ' + ws_token + ',' + '&quot;roomId&quot;: 83,&quot;id&quot;: 39}'
-byte [] key = texts.getBytes(&quot;UTF-8&quot;)
-String encodedauth = encoder.encodeToString(key);
-GlobalVariable.EncodedAuth = encodedauth
-//println encodedauth</verificationScript>
+//def roomid = GlobalVariable.RoomId
+//def user_uid = GlobalVariable.UID
+//def decoder = Base64.getDecoder()
+//def encoder = Base64.getEncoder()
+//
+//def texts = '{&quot;token&quot;: ' + ws_token + ',' + '&quot;roomId&quot;: ' + roomid + ',' + '&quot;id&quot;: ' + user_uid + '}'
+//println(texts)
+//byte [] key = texts.getBytes(&quot;UTF-8&quot;)
+//String encodedauth = encoder.encodeToString(key);
+//GlobalVariable.EncodedAuth = encodedauth</verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>

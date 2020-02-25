@@ -34,6 +34,25 @@ public class DESUtil {
 	///////////////////////////////////////////////////////////////////////////
 
 	/**
+	 * 3DES CBC模式加密
+	 */
+	public static byte[] des3EncodeCBC(byte[] key, byte[] iv, byte[] data) {
+		try {
+			SecretKey DESKey = new SecretKeySpec(key, DES3);    //生成密钥
+			Cipher cipher = Cipher.getInstance(DES3 + "/CBC/PKCS5Padding");
+			IvParameterSpec ips = new IvParameterSpec(iv);
+			cipher.init(Cipher.ENCRYPT_MODE, DESKey, ips);
+			byte[] encBytes = cipher.doFinal(data)
+			String encString = Base64.encoder.encodeToString(encBytes);
+			return GlobalVariable.EncMsg = encString
+		} catch (Exception e) {
+			e.printStackTrace();
+			return null;
+		}
+	}
+
+
+	/**
 	 * 3DES CBC decrypt
 	 */
 	public static byte[] des3DecodeCBC(byte[] key, byte[] iv, byte[] data) {

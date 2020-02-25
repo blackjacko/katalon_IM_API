@@ -17,26 +17,47 @@ import internal.GlobalVariable as GlobalVariable
 import websocket.WSConnect as WSC
 import websocket.DESUtil as DES
 
-for (int i = 1; i <= 100; i++) {
-WS.sendRequestAndVerify(findTestObject('Member/Get oauth token (for others RESTFUL API)', [('env') : env_app
-            , ('encodedkey') : GlobalVariable.EncodedKey, ('account') : 'jack6666', ('password') : '12345678']))
+def totalTest = 0
+def totalFail = 0
 
-WS.sendRequestAndVerify(findTestObject('Member/Get WS Token', [('env') : env_app, ('access_token') : GlobalVariable.Access_Token]))
-
-def desturi = env_ws + GlobalVariable.EncodedAuth
-def msg = '{"msgType":0, "cmd": 11,"from": 39,"to": 36,"createTime": 1576562393,"type": 1,"roomId": 83,"content": "send message from Jack by Katalon"}'
-def jsonSlurper = new groovy.json.JsonSlurper()
-def request = jsonSlurper.parseText(msg)
-
-WSC.sendMessage(desturi, msg)
-
-def reply = GlobalVariable.WS_Reply
-def key = "123456789012345678901234"
-def iv = "45841036"
-def bytekey = key.getBytes()
-def byteiv = iv.getBytes()
-def bytetext = reply.getBytes()
-
-DES.des3DecodeCBC(bytekey, byteiv, bytetext)
-println(GlobalVariable.DecMsg)
+for (int i = 1; i <= 1; i++) {
+    WS.sendRequestAndVerify(findTestObject('Member/Get oauth token (for others RESTFUL API)', [('env') : env_app, ('account') : account
+                , ('password') : password]))
+    WS.sendRequestAndVerify(findTestObject('Member/Get WS Token', [('env') : env_app, ('access_token') : GlobalVariable.Access_Token]))
+	
+	// generate websocket auth
+	def roomid = roomid
+    def user_uid = user_uid
+    def ws_token = GlobalVariable.WS_Token
+    def decoder = Base64.getDecoder()
+    def encoder = Base64.getEncoder()
+    def texts = '{"token": ' + ws_token + ',' + '"roomId": ' + roomid + ',' + '"id": ' + user_uid + '}'
+    byte [] encode_key = texts.getBytes("UTF-8")
+    String encodedauth = encoder.encodeToString(encode_key);
+    GlobalVariable.EncodedAuth = encodedauth
+	
+	// send message
+	def desturi = env_ws + encodedauth
+	def msg = message
+//	def jsonSlurper = new groovy.json.JsonSlurper()
+//	def request = jsonSlurper.parseText(msg)
+	WSC.sendMessage(desturi, msg)
+	
+	// Decode response
+	def reply = GlobalVariable.WS_Reply
+	def key = '123456789012345678901234'
+	def iv = '45841036'
+	def bytekey = key.getBytes()
+	def byteiv = iv.getBytes()
+	def bytetext = reply.getBytes()
+	DES.des3DecodeCBC(bytekey, byteiv, bytetext)
+	println(GlobalVariable.DecMsg)
+	totalTest = i
+	
+	if (GlobalVariable.DecMsg == '{"version":"1.0.62"}') {
+		totalFail = (totalFail + 1)
+	} 
 }
+
+println(totalTest)
+println(totalFail)

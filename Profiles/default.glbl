@@ -56,7 +56,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>''</initValue>
+      <initValue>'110'</initValue>
       <name>RoomId</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -76,7 +76,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>''</initValue>
+      <initValue>'65708262'</initValue>
       <name>UID</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -88,6 +88,11 @@
       <description></description>
       <initValue>''</initValue>
       <name>WS_Reply</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>EncMsg</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>

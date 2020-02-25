@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>Decrypt Message</name>
+   <name>Message Encoder and Decoder</name>
    <tag></tag>
    <comment></comment>
    <testCaseGuid>57cf66ee-c310-4a3a-b645-e45d6e08d56b</testCaseGuid>
