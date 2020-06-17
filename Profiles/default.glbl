@@ -6,28 +6,13 @@
    <defaultProfile>true</defaultProfile>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'falimapp.bahdie4ze.com/member'</initValue>
-      <name>QAT_APP_Member</name>
+      <initValue>'http://10.220.10.111:8889'</initValue>
+      <name>APP_Member</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'ws://falimsocket.bahdie4ze.com/?auth='</initValue>
-      <name>QAT_WS</name>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description></description>
-      <initValue>'imadm.lfbxci66o.com/apis'</initValue>
-      <name>UD_Console_Admin</name>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description></description>
-      <initValue>'imweb.lfbxci66o.com/member'</initValue>
-      <name>UD_WEB_Member</name>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description></description>
-      <initValue>'imapp.lfbxci66o.com/member'</initValue>
-      <name>UD_APP_Member</name>
+      <initValue>'ws://10.220.10.104:6161'</initValue>
+      <name>WS</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
@@ -41,6 +26,11 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
+      <initValue>''</initValue>
+      <name>UserId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
       <initValue>'SmFjazo5dGdkaGVJZQ=='</initValue>
       <name>EncodedKey</name>
    </GlobalVariableEntity>
@@ -48,11 +38,6 @@
       <description></description>
       <initValue>''</initValue>
       <name>EncodedAuth</name>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description></description>
-      <initValue>''</initValue>
-      <name>UserId</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
@@ -66,7 +51,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'76353ff6-7bae-4074-9152-07ae033261a0'</initValue>
+      <initValue>'fbf1b060-9c06-4b0e-a3cb-4e3715212c18'</initValue>
       <name>Access_Token</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -101,7 +86,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>''</initValue>
+      <initValue>'loadttest5'</initValue>
       <name>Account</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>

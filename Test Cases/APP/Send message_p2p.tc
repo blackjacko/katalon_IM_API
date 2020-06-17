@@ -6,21 +6,21 @@
    <comment></comment>
    <testCaseGuid>0d33aed1-c3ce-4511-b680-19ea642592bb</testCaseGuid>
    <variable>
-      <defaultValue>GlobalVariable.QAT_WS</defaultValue>
+      <defaultValue>GlobalVariable.UD_WS</defaultValue>
       <description></description>
       <id>185bec84-f4eb-4d43-9788-17e45927850a</id>
       <masked>false</masked>
       <name>env_ws</name>
    </variable>
    <variable>
-      <defaultValue>GlobalVariable.QAT_APP_Member</defaultValue>
+      <defaultValue>GlobalVariable.UD_APP_Member</defaultValue>
       <description></description>
       <id>e37fca4e-2603-4c04-b089-8ae84e5522f1</id>
       <masked>false</masked>
       <name>env_app</name>
    </variable>
    <variable>
-      <defaultValue>'jack14'</defaultValue>
+      <defaultValue>'jack'</defaultValue>
       <description></description>
       <id>7fb792aa-6ed0-44b8-99db-eaf0e83ae21b</id>
       <masked>false</masked>
@@ -34,7 +34,7 @@
       <name>password</name>
    </variable>
    <variable>
-      <defaultValue>'tV+GCxMKm3UI6eAOxEJX/Wqp5eoWisBtTsv5oWl2zWRuvjzIBq8tQ0hnwjgQyyqWWOaoYXPbjTpoAZ+45CjafDgRA7fKkb4buXLciVUO0kIHykYEu7qhqWb/kcj+KyLLflIDXuyC0kS3nqp0gPPl0EjmLY2p8qeigrqiqYyDfkOpoT/ZY04MR+p/lmTgNPmXRu4Oj0RnXKwMLom/jHreA+F65hH8r8Fvl6AFjZzhjFCtqaMTKovfyTh3iB1HL/9h+dF/ekJPtgWnXsF9S1XZ7hfoUYTd7xeD1cx7lOVlUv2egptOwnCUbg=='</defaultValue>
+      <defaultValue>'2m/2IBsNH4Wi+QG7sU+vohjspfyvJmJN51OVzMk4dwK4fppKrQoO9fWBvTgeeZQRlWJyRVrtgcAC+pJ9HVqlz05fyAF9FkpSCGtJ7SyJ+6Lm/ZsRix6+G1X2hNSQLx3KZ62F8oJcUmwdKJ+rwVL8HWdaSQ4nc/THPXTAC3DFQmMby1DzP2SqncrxlDD9b3Q5qPUdRqNPv6E='</defaultValue>
       <description></description>
       <id>59729ea6-4dc1-4183-9300-03175e0c4b7b</id>
       <masked>false</masked>

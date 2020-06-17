@@ -15,7 +15,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
-WS.sendRequestAndVerify(findTestObject('Member/Login ByIdentityCode', [('env') : GlobalVariable.QAT_APP_Member, ('identityCode') : GlobalVariable.IdentityCode]))
+WS.sendRequestAndVerify(findTestObject('Member/Login ByIdentityCode', [('env') : GlobalVariable.APP_Member, ('identityCode') : GlobalVariable.IdentityCode]))
 
-WS.sendRequestAndVerify(findTestObject('Member/Login byName', [('env') : GlobalVariable.QAT_APP_Member, ('username') : GlobalVariable.UserName]))
+WS.sendRequestAndVerify(findTestObject('Member/Login byName', [('env') : GlobalVariable.APP_Member, ('username') : GlobalVariable.UserName]))
 

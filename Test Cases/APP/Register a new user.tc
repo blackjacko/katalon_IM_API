@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Register a new user</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>96f2c0bf-4075-4608-af47-361611414717</testCaseGuid>
+   <variable>
+      <defaultValue>'Jack'</defaultValue>
+      <description></description>
+      <id>4d377838-f494-4a36-9bf2-1bb6f1290015</id>
+      <masked>false</masked>
+      <name>accounts</name>
+   </variable>
+   <variable>
+      <defaultValue>GlobalVariable.APP_Member</defaultValue>
+      <description></description>
+      <id>d374795e-fba2-426b-995e-a8c37df4ec7c</id>
+      <masked>false</masked>
+      <name>env</name>
+   </variable>
+</TestCaseEntity>

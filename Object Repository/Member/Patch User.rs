@@ -1,74 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>Get oauth token (for others RESTFUL API)</name>
+   <name>Patch User</name>
    <tag></tag>
-   <elementGuidId>d7cc649d-cfea-4cbc-be11-43d22b0ba05b</elementGuidId>
+   <elementGuidId>c33ed167-8134-4fd0-8d94-9a977864f5f4</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;parameters&quot;: [
-    {
-      &quot;name&quot;: &quot;grant_type&quot;,
-      &quot;value&quot;: &quot;password&quot;,
-      &quot;type&quot;: &quot;text&quot;
-    },
-    {
-      &quot;name&quot;: &quot;username&quot;,
-      &quot;value&quot;: &quot;${account}&quot;,
-      &quot;type&quot;: &quot;text&quot;
-    },
-    {
-      &quot;name&quot;: &quot;password&quot;,
-      &quot;value&quot;: &quot;${password}&quot;,
-      &quot;type&quot;: &quot;text&quot;
-    }
-  ]
+  &quot;text&quot;: &quot;{\n  \&quot;userId\&quot;: ${userid},\n  \&quot;username\&quot;: \&quot;${account}\&quot;\n}&quot;,
+  &quot;contentType&quot;: &quot;application/json&quot;,
+  &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
-   <httpBodyType>form-data</httpBodyType>
+   <httpBodyType>text</httpBodyType>
+   <httpHeaderProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>Content-Type</name>
+      <type>Main</type>
+      <value>application/json</value>
+   </httpHeaderProperties>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>Authorization</name>
       <type>Main</type>
-      <value>Basic aW1fbWVtYmVyX2NsaWVudGFwcDoxMjM0NTY=</value>
-   </httpHeaderProperties>
-   <httpHeaderProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>Content-Type</name>
-      <type>Main</type>
+      <value>Bearer ${access_token}</value>
    </httpHeaderProperties>
    <migratedVersion>5.4.1</migratedVersion>
-   <restRequestMethod>POST</restRequestMethod>
-   <restUrl>${env}/oauth/token</restUrl>
+   <restRequestMethod>PATCH</restRequestMethod>
+   <restUrl>${env}/im/user</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
    <soapRequestMethod></soapRequestMethod>
    <soapServiceFunction></soapServiceFunction>
    <variables>
-      <defaultValue>GlobalVariable.QAT_APP_Member</defaultValue>
+      <defaultValue>GlobalVariable.APP_Member</defaultValue>
       <description></description>
-      <id>7b1c8db4-bf51-4cb8-969b-d07e85c7e22e</id>
+      <id>2c52dbd3-5156-4dbf-9abb-51467cb5468d</id>
       <masked>false</masked>
       <name>env</name>
    </variables>
    <variables>
-      <defaultValue>'loadtest4'</defaultValue>
+      <defaultValue>GlobalVariable.Access_Token</defaultValue>
       <description></description>
-      <id>47563356-bd79-497d-a618-577be458216d</id>
+      <id>5bc5cc5b-1281-48ee-b737-44a0bfed717f</id>
       <masked>false</masked>
-      <name>account</name>
+      <name>access_token</name>
    </variables>
    <variables>
-      <defaultValue>'12345678'</defaultValue>
+      <defaultValue>GlobalVariable.UserId</defaultValue>
       <description></description>
-      <id>8628d5dd-05a2-4bf0-9a58-762e3e29108a</id>
+      <id>188befe2-cf23-43ee-a41d-3c64283ab911</id>
       <masked>false</masked>
-      <name>password</name>
+      <name>userid</name>
+   </variables>
+   <variables>
+      <defaultValue>GlobalVariable.Account</defaultValue>
+      <description></description>
+      <id>c43e2161-c2f9-4644-bcc2-1349e34540f7</id>
+      <masked>false</masked>
+      <name>account</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
@@ -82,11 +76,6 @@ import internal.GlobalVariable as GlobalVariable
 
 RequestObject request = WSResponseManager.getInstance().getCurrentRequest()
 
-ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
-
-def result = new groovy.json.JsonSlurper()
-def response_body = result.parseText(response.getResponseBodyContent())
-def access_token = response_body.access_token
-GlobalVariable.Access_Token = access_token</verificationScript>
+ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()</verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>

@@ -5,4 +5,18 @@
    <tag></tag>
    <comment></comment>
    <testCaseGuid>57cf66ee-c310-4a3a-b645-e45d6e08d56b</testCaseGuid>
+   <variable>
+      <defaultValue>'414'</defaultValue>
+      <description></description>
+      <id>7d6963a9-eb6e-4898-b8e8-fcda9f0565a1</id>
+      <masked>false</masked>
+      <name>room_id</name>
+   </variable>
+   <variable>
+      <defaultValue>findTestData('account list for register new users').getValue(3, 1)</defaultValue>
+      <description></description>
+      <id>07674ccb-95a3-43fa-9532-6830583f17cc</id>
+      <masked>false</masked>
+      <name>row_no</name>
+   </variable>
 </TestCaseEntity>

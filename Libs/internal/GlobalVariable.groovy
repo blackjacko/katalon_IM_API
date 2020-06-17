@@ -12,27 +12,12 @@ public class GlobalVariable {
     /**
      * <p></p>
      */
-    public static Object QAT_APP_Member
+    public static Object APP_Member
      
     /**
      * <p></p>
      */
-    public static Object QAT_WS
-     
-    /**
-     * <p></p>
-     */
-    public static Object UD_Console_Admin
-     
-    /**
-     * <p></p>
-     */
-    public static Object UD_WEB_Member
-     
-    /**
-     * <p></p>
-     */
-    public static Object UD_APP_Member
+    public static Object WS
      
     /**
      * <p></p>
@@ -47,17 +32,17 @@ public class GlobalVariable {
     /**
      * <p></p>
      */
+    public static Object UserId
+     
+    /**
+     * <p></p>
+     */
     public static Object EncodedKey
      
     /**
      * <p></p>
      */
     public static Object EncodedAuth
-     
-    /**
-     * <p></p>
-     */
-    public static Object UserId
      
     /**
      * <p></p>
@@ -121,16 +106,13 @@ public class GlobalVariable {
 			selectedVariables += TestCaseMain.getGlobalVariables(RunConfiguration.getExecutionProfile())
             selectedVariables += RunConfiguration.getOverridingParameters()
     
-            QAT_APP_Member = selectedVariables['QAT_APP_Member']
-            QAT_WS = selectedVariables['QAT_WS']
-            UD_Console_Admin = selectedVariables['UD_Console_Admin']
-            UD_WEB_Member = selectedVariables['UD_WEB_Member']
-            UD_APP_Member = selectedVariables['UD_APP_Member']
+            APP_Member = selectedVariables['APP_Member']
+            WS = selectedVariables['WS']
             IdentityCode = selectedVariables['IdentityCode']
             UserName = selectedVariables['UserName']
+            UserId = selectedVariables['UserId']
             EncodedKey = selectedVariables['EncodedKey']
             EncodedAuth = selectedVariables['EncodedAuth']
-            UserId = selectedVariables['UserId']
             RoomId = selectedVariables['RoomId']
             Refresh_Token = selectedVariables['Refresh_Token']
             Access_Token = selectedVariables['Access_Token']

@@ -15,7 +15,11 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
-WS.sendRequestAndVerify(findTestObject('Member/retrieve console auth token (for admin)', [('env') : env]))
+WS.sendRequestAndVerify(findTestObject('Member/Register a new user', [('env') : env, ('account') : accounts]))
 
-WS.sendRequestAndVerify(findTestObject('Consloe/Create User', [('env') : env, ('refresh_token') : oatuh
-            , ('oid') : oid, ('uid') : uid]))
+WS.sendRequestAndVerify(findTestObject('Member/Get oauth token (for others RESTFUL API)', [('env') :env
+            , ('account') : accounts, ('password') : '12345678']))
+
+WS.sendRequestAndVerify(findTestObject('Member/Patch User', [('env') : env, ('access_token') : GlobalVariable.Access_Token
+            , ('userid') : GlobalVariable.UserId, ('account') : accounts]))
+
